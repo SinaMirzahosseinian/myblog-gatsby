@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import { Link } from 'gatsby'
 
 export default class About extends Component {
   render() {

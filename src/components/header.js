@@ -1,20 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styled from "styled-components"
+
+const HeaderWrapper = styled.div`
+      background: black;
+      margin-bottom: 1.45rem;
+`;
+
+const HeaderContainer = styled.div`
+      margin: 0px auto;
+      max-width: 960px;
+      padding: 1.45rem 1.0875rem;
+
+`;
+
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
+  <HeaderWrapper>
+    <HeaderContainer>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -26,18 +29,18 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    </HeaderContainer>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+  </HeaderWrapper>
 )
 
 export default Header
